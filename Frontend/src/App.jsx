@@ -3,7 +3,7 @@ import "./App.css";
 import axios from "axios";
 
 function App() {
-  const [data, setData] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
@@ -12,7 +12,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   return (
     <>
